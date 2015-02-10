@@ -4,13 +4,22 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">-->
     <title ng-bind="title"></title>
     <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css.css">
 </head>
-<body style="height: 100%">
-<div ng-view>hello</div>
+<body ng-app="cases">
+<div ng-view></div>
 
+<script src="https://leancloud.cn/scripts/lib/av-0.4.7.min.js"></script>
 <script src="./lib/jquery/dist/jquery.min.js"></script>
-<script src="./lib/angular/angular.min.js"></script>
+<script src="./lib/angularjs/angular.min.js"></script>
+<script src="./lib/angular-route/angular-route.min.js"></script>
+<script src="./script/casesApp.js"></script>
+<script src="./script/loginController.js"></script>
+<script src="./script/listController.js"></script>
+<script src="./script/detailController.js"></script>
+<script src="./script/addController.js"></script>
+<script src="./script/editController.js"></script>
 </html>

@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 class="text-center">请登录</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-3"></div>
+        <div class="col-xs-6">
+            <form ng-submit="doLogin()">
+                <div class="form-group">
+                    <label for="username">用户名</label>
+                    <input type="text" class="form-control" id="username" placeholder="请输入用户名"
+                           ng-model="user.username">
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" class="form-control" id="password" placeholder="请输入密码"
+                           ng-model="user.password">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">登陆</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-3"></div>
+    </div>
+</div>

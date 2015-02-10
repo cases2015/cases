@@ -1,0 +1,364 @@
+<div class="page-header">
+    <h1 style="margin: 20px 0px 0px 100px" class="text-info">病例</h1>
+</div>
+<div class="container">
+    <form>
+        <div class="row">
+            <div class="col-xs-12">
+<!--基本信息  begin-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">一、基本信息</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th class="text-center">姓名</th>
+                                <th class="text-center">病历号</th>
+                                <th class="text-center">性别</th>
+                                <th class="text-center">年龄</th>
+                                <th class="text-center">就诊时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <input type="text" placeholder="姓名" ng-model="cases.p1_name">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" placeholder="病历号" ng-model="cases.p1_number">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" placeholder="性别" ng-model="cases.p1_sex">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" placeholder="年龄" ng-model="cases.p1_age">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" placeholder="就诊时间" ng-model="cases.p1_date">
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+<!--基本信息 end-->
+
+<!--临床表现 begin-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">二、临床表现</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th class="text-center">症状</th>
+                                <th class="text-center">胸闷</th>
+                                <th class="text-center">心悸</th>
+                                <th class="text-center">胸痛</th>
+                                <th class="text-center">长出气</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <h5>病程</h5>
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" ng-model="cases.p2_1_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" ng-model="cases.p2_1_2">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" ng-model="cases.p2_1_3">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" ng-model="cases.p2_1_4">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <h5>首发症状</h5>
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" ng-model="cases.p2_2_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" ng-model="cases.p2_2_2">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" ng-model="cases.p2_2_3">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" ng-model="cases.p2_2_4">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <h5>其他</h5>
+                                </td>
+                                <td colspan="4">
+                                    <textarea style="width: 80%;margin-left: 18px" ng-model="cases.p2_3"></textarea>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+<!--临床表现 end-->
+
+<!--体征 begin-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">三、体征</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <textarea style="width: 80%;height: 100px" ng-model="cases.p3"></textarea>
+                    </div>
+                </div>
+<!--体征 end-->
+
+<!--检验 begin-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">四、检验</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <table class="table">
+                            <caption>1、血常规</caption>
+                            <thead>
+                            <tr>
+                                <th class="text-center">日期</th>
+                                <th class="text-center">WBC</th>
+                                <th class="text-center">L</th>
+                                <th class="text-center">NE</th>
+                                <th class="text-center">MO</th>
+                                <th class="text-center">HGB</th>
+                                <th class="text-center">PLT</th>
+                                <th class="text-center">杆</th>
+                                <th class="text-center">分叶</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <input type="text" style="width:80px" ng-model="cases.p2_1_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:80px" ng-model="cases.p2_1_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:80px" ng-model="cases.p2_1_2">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:80px" ng-model="cases.p2_1_3">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:80px" ng-model="cases.p2_1_4">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:80px" ng-model="cases.p2_1_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:80px" ng-model="cases.p2_1_2">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:80px" ng-model="cases.p2_1_3">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:80px" ng-model="cases.p2_1_4">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <button class="btn btn-info pull-left">新增</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="table">
+                            <caption>2、生化指标及心肌酶</caption>
+                            <thead>
+                            <tr>
+                                <th class="text-center">日期</th>
+                                <th class="text-center">ALT</th>
+                                <th class="text-center">CKMB</th>
+                                <th class="text-center">CK</th>
+                                <th class="text-center">cTnI</th>
+                                <th class="text-center">LDH</th>
+                                <th class="text-center">BNP</th>
+                                <th class="text-center">备注</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <input type="text" style="width:90px" ng-model="cases.p2_1_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:90px" ng-model="cases.p2_1_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:90px" ng-model="cases.p2_1_2">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:90px" ng-model="cases.p2_1_3">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:90px" ng-model="cases.p2_1_4">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:90px" ng-model="cases.p2_1_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:90px" ng-model="cases.p2_1_2">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:90px" ng-model="cases.p2_1_3">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <button class="btn btn-info pull-left">新增</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table">
+                            <caption>3、病原学检查</caption>
+                            <thead>
+                            <tr>
+                                <th class="text-center">日期</th>
+                                <th class="text-center">CMV-IgM</th>
+                                <th class="text-center">VCA</th>
+                                <th class="text-center">COX</th>
+                                <th class="text-center">ASO</th>
+                                <th class="text-center">支原体滴度</th>
+                                <th class="text-center">备注</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <input type="text" style="width:100px" ng-model="cases.p2_1_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:100px" ng-model="cases.p2_1_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:100px" ng-model="cases.p2_1_2">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:100px" ng-model="cases.p2_1_3">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:100px" ng-model="cases.p2_1_4">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:100px" ng-model="cases.p2_1_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:100px" ng-model="cases.p2_1_2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <button class="btn btn-info pull-left">新增</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table">
+                            <caption>4、甲状腺功能</caption>
+                            <thead>
+                            <tr>
+                                <th class="text-center">日期</th>
+                                <th class="text-center">T3</th>
+                                <th class="text-center">T4</th>
+                                <th class="text-center">FT3</th>
+                                <th class="text-center">FT4</th>
+                                <th class="text-center">TSH</th>
+                                <th class="text-center">备注</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <input type="text" style="width:100px" ng-model="cases.p2_1_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:100px" ng-model="cases.p2_1_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:100px" ng-model="cases.p2_1_2">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:100px" ng-model="cases.p2_1_3">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:100px" ng-model="cases.p2_1_4">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:100px" ng-model="cases.p2_1_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:100px" ng-model="cases.p2_1_2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <button class="btn btn-info pull-left">新增</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="table">
+                            <caption>4、甲状腺功能</caption>
+                            <thead>
+                            <tr>
+                                <th class="text-center">日期</th>
+                                <th class="text-center">血管紧张素</th>
+                                <th class="text-center">肾素活性</th>
+                                <th class="text-center">醛固酮</th>
+                                <th class="text-center">备注</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <input type="text" style="width:150px" ng-model="cases.p2_1_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:150px" ng-model="cases.p2_1_1">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:150px" ng-model="cases.p2_1_2">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:150px" ng-model="cases.p2_1_3">
+                                </td>
+                                <td class="text-center">
+                                    <input type="text" style="width:150px" ng-model="cases.p2_1_4">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">
+                                    <button class="btn btn-info pull-left">新增</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+<!--检验 end-->
+
+            </div>
+        </div>
+    </form>
+</div>
