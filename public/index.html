@@ -7,16 +7,32 @@
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">-->
     <title ng-bind="title"></title>
     <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/angular-dialog-service/dist/dialogs.min.css">
     <link rel="stylesheet" href="./css.css">
+    <style>
+        body { padding: 20px; }
+        .my-class .modal-body {
+            background-color: #eee;
+        }
+        .my-class .modal-footer {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body ng-app="cases">
 <div ng-view></div>
 
 <script src="https://leancloud.cn/scripts/lib/av-0.4.7.min.js"></script>
 <script src="./lib/jquery/dist/jquery.min.js"></script>
-<script src="./lib/angularjs/angular.min.js"></script>
+<script src="./lib/angularjs/angular.js"></script>
 <script src="./lib/angular-route/angular-route.min.js"></script>
+<script src="./lib/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="./lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="./lib/angular-translate/angular-translate.min.js"></script>
+<script src="./lib/angular-dialog-service/dist/dialogs-default-translations.min.js"></script>
+<script src="./lib/angular-dialog-service/dist/dialogs.min.js"></script>
 <script src="./script/casesApp.js"></script>
+<script src="./lib/angular-paging/paging.js"></script>
 <script src="./script/loginController.js"></script>
 <script src="./script/listController.js"></script>
 <script src="./script/detailController.js"></script>

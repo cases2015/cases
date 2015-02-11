@@ -5,14 +5,14 @@
     <div class="row">
         <div class="col-xs-1"></div>
         <div class="col-xs-10">
-            <button class="btn btn-info pull-right glyphicon glyphicon-plus">新增</button>
+            <a class="btn btn-info pull-right glyphicon glyphicon-plus" href="#/add">新增</a>
         </div>
         <div class="col-xs-1"></div>
     </div>
     <div class="row">
         <div class="col-xs-1"></div>
         <div class="col-xs-10">
-            <table class="table">
+            <table class="table table-hover">
                 <thead>
                 <tr>
                     <th>#</th>
@@ -24,74 +24,31 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                <tr ng-repeat="patient in patients" ng-click="showDetail(patient.id)">
+                    <td>{{ $index + 1 }}</td>
+                    <td>{{ patient.name }}</td>
+                    <td>{{ patient.number }}</td>
+                    <td>{{ patient.sex }}</td>
+                    <td>{{ patient.age }}</td>
+                    <td>{{ patient.date }}</td>
                 </tr>
                 </tbody>
             </table>
         </div>
         <div class="col-xs-1"></div>
     </div>
-    <div class="row">
-        <nav>
-            <ul class="pager">
-                <li><a href="#">上一页</a></li>
-                <li><a href="#">下一页</a></li>
-
-            </ul>
-        </nav>
+    <div class="row text-center">
+        <paging
+                class="small"
+                page="page.pageNo"
+                page-size="page.pageSize"
+                total="page.total"
+                adjacent="2"
+                dots="..."
+                scroll-top="true"
+                hide-if-empty="true"
+                show-prev-next="true"
+                paging-action="onPageChange(page)">
+        </paging>
     </div>
 </div>
