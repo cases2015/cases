@@ -59,5 +59,10 @@ casesApp.controller("listController", function ($scope, $http, $location, page,$
         });
     };
 
+    $scope.onLogout = function(){
+        AV.User.logOut();
+        $location.path('/login');
+    };
+
     $scope.reload();
 });
