@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./lib/angular-dialog-service/dist/dialogs.min.css">
     <link rel="stylesheet" href="./css.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2pre/html5shiv.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20121008/json2.js"></script>
     <style>
         body { padding: 20px; }
         .my-class .modal-body {
@@ -19,7 +21,7 @@
         }
     </style>
 </head>
-<body ng-app="cases">
+<body ng-app="cases" class="ng-app:cases" id="ng-app">
 <div ng-view></div>
 
 <script src="https://leancloud.cn/scripts/lib/av-0.4.7.min.js"></script>
