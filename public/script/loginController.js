@@ -2,28 +2,34 @@
  * Created by chenguanglv on 15/2/10.
  */
 
-casesApp.controller("loginController", function($scope,$http, $location) {
-
+casesApp.controller("loginController", function($scope,$http, $location,dialogs) {
     $scope.user = {};
 
     $scope.doLogin = function(){
-        if($scope.user.username || $scope.user.password){
+        if($scope.user.username && $scope.user.password){
             AV.User.logIn(
                 $scope.user.username,
                 $scope.user.password,
                 {
                     success : function(user){
-                        casesApp.hasLogin = true;
-                        $location.path('/list');
+                        $scope.$apply(function(){
+                            $location.path('/list');
+                        });
                     },
                     error : function(user,error){
-                        alert('登陆失败：' + error.message + '(' + error.code + ')');
+                        dialogs.error(
+                            "登陆失败",
+                            "用户名密码错误。"
+                        );
                     }
                 }
             );
         }
         else{
-            alert('请输入用户名和密码。');
+            dialogs.notify(
+                "提示",
+                "用户名/密码不能为空。"
+            );
         }
     };
 });

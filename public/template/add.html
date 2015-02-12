@@ -1,3 +1,12 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10"><a class="btn btn-default pull-right" style="margin-top: 6px" ng-click="onLogout()">退出</a></div>
+            <div class="col-xs-1"></div>
+        </div>
+    </div>
+</nav>
 <div class="page-header">
     <h1 style="margin: 20px 0px 0px 100px" class="text-info">病例</h1>
 </div>
@@ -110,12 +119,12 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="text-center">
+                                <td class="text-center" style="width: 10%">
                                     <h5>其他</h5>
                                 </td>
                                 <td colspan="4">
                                     <textarea style="width: 80%;margin-left: 18px" ng-model="cases.p2.sp3" ng-show="mode=='edit' || mode=='add'"></textarea>
-                                    <label ng-show="mode=='view'">{{ cases.p2.sp3 }}</label>
+                                    <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{ cases.p2.sp3 }}</label>
                                 </td>
                             </tr>
                             </tbody>
@@ -131,7 +140,7 @@
                     </div>
                     <div class="panel-body text-center">
                         <textarea style="width: 80%;height: 100px" ng-model="cases.p3" ng-show="mode=='edit' || mode=='add'"></textarea>
-                        <label ng-show="mode=='view'">{{ cases.p3 }}</label>
+                        <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{ cases.p3 }}</label>
                     </div>
                 </div>
 <!--体征 end-->
@@ -445,29 +454,31 @@
                             <tr>
                                 <td>
                                     <textarea style="width: 90%;height: 100px" ng-model="cases.p5.sp1" ng-show="mode=='edit' || mode=='add'"></textarea>
-                                    <label ng-show="mode=='view'">{{ cases.p5.sp1 }}</label>
+                                    <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{ cases.p5.sp1 }}</label>
                                 </td>
                             </tr>
                         </table>
+                        <p></p>
                         <table style="width: 100%;">
                             <caption class="text-left">2、心电图</caption>
                             <tr>
                                 <td>
                                     <textarea style="width: 90%;height: 100px" ng-model="cases.p5.sp2" ng-show="mode=='edit' || mode=='add'"></textarea>
-                                    <label ng-show="mode=='view'">{{ cases.p5.sp2 }}</label>
+                                    <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{ cases.p5.sp2 }}</label>
                                 </td>
                             </tr>
                         </table>
+                        <p></p>
                         <table style="width: 100%;">
                             <caption class="text-left">3、Holter</caption>
                             <tr>
                                 <td>
                                     <textarea style="width: 90%;height: 100px" ng-model="cases.p5.sp3" ng-show="mode=='edit' || mode=='add'"></textarea>
-                                    <label ng-show="mode=='view'">{{ cases.p5.sp3 }}</label>
+                                    <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{ cases.p5.sp3 }}</label>
                                 </td>
                             </tr>
                         </table>
-
+                        <p></p>
                         <table class="table">
                             <caption class="text-left">4、超声心电图</caption>
                             <thead>
@@ -675,9 +686,11 @@
         <button class="btn btn-info" ng-click="editCases()" ng-show="mode=='view'">编辑</button>
         <span ng-show="mode=='edit'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <button class="btn btn-info" ng-click="saveCases()" ng-show="mode=='edit'">保存</button>
+        <span ng-show="mode=='edit' || mode=='view'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <button class="btn btn-danger" ng-click="dropCases()" ng-show="mode=='edit' || mode=='view'">删除</button>
         <span ng-show="mode=='add'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         <button class="btn btn-info" ng-click="addCases()" ng-show="mode=='add'">添加</button>
-        <span ng-show="mode=='add'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        <button class="btn btn-info" ng-click="addCasesAndContinue()" ng-show="mode=='add'">添加并继续</button>
+        <!--<span ng-show="mode=='add'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>-->
+        <!--<button class="btn btn-info" ng-click="addCasesAndContinue()" ng-show="mode=='add'">添加并继续</button>-->
     </div>
 </nav>

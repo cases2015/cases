@@ -54,10 +54,10 @@ angular.module('modalTest',['ui.bootstrap','dialogs.main','pascalprecht.translat
 				case 'confirm':
 					var dlg = dialogs.confirm();
 					dlg.result.then(function(btn){
-						$scope.confirmed = 'You confirmed "Yes."';
-					},function(btn){
-						$scope.confirmed = 'You confirmed "No."';
-					});
+					$scope.confirmed = 'You confirmed "Yes."';
+				},function(btn){
+					$scope.confirmed = 'You confirmed "No."';
+				});
 					break;
 				case 'custom':
 					var dlg = dialogs.create('/dialogs/custom.html','customDialogCtrl',{},{size:'lg',keyboard: true,backdrop: false,windowClass: 'my-class'});
