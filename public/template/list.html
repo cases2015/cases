@@ -2,7 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-1"></div>
-            <div class="col-xs-10"><a class="btn btn-default pull-right" style="margin-top: 6px" ng-click="onLogout()">退出</a></div>
+            <div class="col-xs-10"><a class="btn btn-default pull-right" style="margin-top: 6px" ng-click="onLogout()">退出</a>
+            </div>
             <div class="col-xs-1"></div>
         </div>
     </div>
@@ -14,10 +15,23 @@
     <div class="row">
         <div class="col-xs-1"></div>
         <div class="col-xs-10">
-            <a class="btn btn-info pull-right glyphicon glyphicon-plus" href="#/add">新增</a>
+            <div class="row">
+                <div class="col-xs-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入关键字..." ng-model="keyword" ng-keypress="onKeyPress($event)">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" ng-click="reload()">搜索</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-xs-9">
+                    <a class="btn btn-info pull-right glyphicon glyphicon-plus" href="#/add">新增</a>
+                </div>
+            </div>
         </div>
         <div class="col-xs-1"></div>
     </div>
+    <p></p>
     <div class="row">
         <div class="col-xs-1"></div>
         <div class="col-xs-10">
@@ -34,7 +48,7 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="patient in patients" ng-click="showDetail(patient.id)">
-                    <td>{{ $index + 1 }}</td>
+                    <td>{{ (page.pageNo - 1) * page.pageSize + $index + 1 }}</td>
                     <td>{{ patient.name }}</td>
                     <td>{{ patient.number }}</td>
                     <td>{{ patient.sex }}</td>

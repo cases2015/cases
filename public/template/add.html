@@ -2,7 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-1"></div>
-            <div class="col-xs-10"><a class="btn btn-default pull-right" style="margin-top: 6px" ng-click="onLogout()">退出</a></div>
+            <div class="col-xs-10"><a class="btn btn-default pull-right" style="margin-top: 6px" ng-click="onLogout()">退出</a>
+            </div>
             <div class="col-xs-1"></div>
         </div>
     </div>
@@ -14,7 +15,7 @@
     <form>
         <div class="row">
             <div class="col-xs-12">
-<!--基本信息  begin-->
+                <!--基本信息  begin-->
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         <h3 class="panel-title">一、基本信息</h3>
@@ -33,23 +34,28 @@
                             <tbody>
                             <tr>
                                 <td class="text-center">
-                                    <input type="text" placeholder="姓名" ng-model="cases.p1.name" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" placeholder="姓名" ng-model="cases.p1.name"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ cases.p1.name }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" placeholder="病历号" ng-model="cases.p1.number" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" placeholder="病历号" ng-model="cases.p1.number"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ cases.p1.number }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" placeholder="性别" ng-model="cases.p1.sex" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" placeholder="性别" ng-model="cases.p1.sex"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ cases.p1.sex }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" placeholder="年龄" ng-model="cases.p1.age" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" placeholder="年龄" ng-model="cases.p1.age"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ cases.p1.age }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" placeholder="就诊时间" ng-model="cases.p1.date" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" placeholder="就诊时间" ng-model="cases.p1.date"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ cases.p1.date }}</label>
                                 </td>
                             </tr>
@@ -57,9 +63,9 @@
                         </table>
                     </div>
                 </div>
-<!--基本信息 end-->
+                <!--基本信息 end-->
 
-<!--临床表现 begin-->
+                <!--临床表现 begin-->
                 <div class="panel panel-success">
                     <div class="panel-heading">
                         <h3 class="panel-title">二、临床表现</h3>
@@ -123,29 +129,33 @@
                                     <h5>其他</h5>
                                 </td>
                                 <td colspan="4">
-                                    <textarea style="width: 80%;margin-left: 18px" ng-model="cases.p2.sp3" ng-show="mode=='edit' || mode=='add'"></textarea>
-                                    <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{ cases.p2.sp3 }}</label>
+                                    <textarea style="width: 80%;margin-left: 18px" ng-model="cases.p2.sp3"
+                                              ng-show="mode=='edit' || mode=='add'"></textarea>
+                                    <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{
+                                        cases.p2.sp3 }}</label>
                                 </td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-<!--临床表现 end-->
+                <!--临床表现 end-->
 
-<!--体征 begin-->
+                <!--体征 begin-->
                 <div class="panel panel-warning">
                     <div class="panel-heading">
                         <h3 class="panel-title">三、体征</h3>
                     </div>
                     <div class="panel-body text-center">
-                        <textarea style="width: 80%;height: 100px" ng-model="cases.p3" ng-show="mode=='edit' || mode=='add'"></textarea>
-                        <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{ cases.p3 }}</label>
+                        <textarea style="width: 80%;height: 100px" ng-model="cases.p3"
+                                  ng-show="mode=='edit' || mode=='add'"></textarea>
+                        <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{ cases.p3
+                            }}</label>
                     </div>
                 </div>
-<!--体征 end-->
+                <!--体征 end-->
 
-<!--检验 begin-->
+                <!--检验 begin-->
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">四、检验</h3>
@@ -170,49 +180,61 @@
                             <tbody>
                             <tr ng-repeat="itemsp1 in cases.p4.sp1">
                                 <td class="text-center">
-                                    <input type="text" style="width:80px" ng-model="itemsp1.f1" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:80px" ng-model="itemsp1.f1"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp1.f1 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:80px" ng-model="itemsp1.f2" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:80px" ng-model="itemsp1.f2"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp1.f2 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:80px" ng-model="itemsp1.f3" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:80px" ng-model="itemsp1.f3"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp1.f3 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:80px" ng-model="itemsp1.f4" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:80px" ng-model="itemsp1.f4"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp1.f4 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:80px" ng-model="itemsp1.f5" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:80px" ng-model="itemsp1.f5"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp1.f5 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:80px" ng-model="itemsp1.f6" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:80px" ng-model="itemsp1.f6"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp1.f6 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:80px" ng-model="itemsp1.f7" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:80px" ng-model="itemsp1.f7"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp1.f7 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:80px" ng-model="itemsp1.f8" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:80px" ng-model="itemsp1.f8"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp1.f8 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:80px" ng-model="itemsp1.f9" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:80px" ng-model="itemsp1.f9"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp1.f9 }}</label>
                                 </td>
                                 <td class="text-center">
                                     <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"
-                                          title="删除" ng-click="removeSubPart(cases.p4.sp1,itemsp1)" ng-show="mode=='edit' || mode=='add'"></span>
+                                          title="删除" ng-click="removeSubPart(cases.p4.sp1,itemsp1)"
+                                          ng-show="mode=='edit' || mode=='add'"></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="9">
-                                    <button class="btn btn-info pull-left" ng-click="addSubPart(cases.p4.sp1)" ng-show="mode=='edit' || mode=='add'">新增</button>
+                                    <button class="btn btn-info pull-left" ng-click="addSubPart(cases.p4.sp1)"
+                                            ng-show="mode=='edit' || mode=='add'">新增
+                                    </button>
                                 </td>
                             </tr>
                             </tbody>
@@ -235,45 +257,56 @@
                             <tbody>
                             <tr ng-repeat="itemsp2 in cases.p4.sp2">
                                 <td class="text-center">
-                                    <input type="text" style="width:90px" ng-model="itemsp2.f1" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:90px" ng-model="itemsp2.f1"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp2.f1 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:90px" ng-model="itemsp2.f2" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:90px" ng-model="itemsp2.f2"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp2.f2 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:90px" ng-model="itemsp2.f3" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:90px" ng-model="itemsp2.f3"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp2.f3 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:90px" ng-model="itemsp2.f4" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:90px" ng-model="itemsp2.f4"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp2.f4 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:90px" ng-model="itemsp2.f5" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:90px" ng-model="itemsp2.f5"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp2.f5 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:90px" ng-model="itemsp2.f6" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:90px" ng-model="itemsp2.f6"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp2.f6 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:90px" ng-model="itemsp2.f7" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:90px" ng-model="itemsp2.f7"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp2.f7 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:90px" ng-model="itemsp2.f8" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:90px" ng-model="itemsp2.f8"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp2.f8 }}</label>
                                 </td>
                                 <td class="text-center">
                                     <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"
-                                          title="删除" ng-click="removeSubPart(cases.p4.sp2,itemsp2)" ng-show="mode=='edit' || mode=='add'"></span>
+                                          title="删除" ng-click="removeSubPart(cases.p4.sp2,itemsp2)"
+                                          ng-show="mode=='edit' || mode=='add'"></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="9">
-                                    <button class="btn btn-info pull-left" ng-click="addSubPart(cases.p4.sp2)" ng-show="mode=='edit' || mode=='add'">新增</button>
+                                    <button class="btn btn-info pull-left" ng-click="addSubPart(cases.p4.sp2)"
+                                            ng-show="mode=='edit' || mode=='add'">新增
+                                    </button>
                                 </td>
                             </tr>
                             </tbody>
@@ -296,154 +329,164 @@
                             <tbody>
                             <tr ng-repeat="itemsp3 in cases.p4.sp3">
                                 <td class="text-center">
-                                    <input type="text" style="width:100px" ng-model="itemsp3.f1" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:100px" ng-model="itemsp3.f1"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp3.f1 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:100px" ng-model="itemsp3.f2" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:100px" ng-model="itemsp3.f2"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp3.f2 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:100px" ng-model="itemsp3.f3" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:100px" ng-model="itemsp3.f3"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp3.f3 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:100px" ng-model="itemsp3.f4" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:100px" ng-model="itemsp3.f4"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp3.f4 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:100px" ng-model="itemsp3.f5" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:100px" ng-model="itemsp3.f5"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp3.f5 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:100px" ng-model="itemsp3.f6" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:100px" ng-model="itemsp3.f6"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp3.f6 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:100px" ng-model="itemsp3.f7" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:100px" ng-model="itemsp3.f7"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp3.f7 }}</label>
                                 </td>
                                 <td class="text-center">
                                     <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"
-                                          title="删除" ng-click="removeSubPart(cases.p4.sp3,itemsp3)" ng-show="mode=='edit' || mode=='add'"></span>
+                                          title="删除" ng-click="removeSubPart(cases.p4.sp3,itemsp3)"
+                                          ng-show="mode=='edit' || mode=='add'"></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="9">
-                                    <button class="btn btn-info pull-left" ng-click="addSubPart(cases.p4.sp3)" ng-show="mode=='edit' || mode=='add'">新增</button>
+                                    <button class="btn btn-info pull-left" ng-click="addSubPart(cases.p4.sp3)"
+                                            ng-show="mode=='edit' || mode=='add'">新增
+                                    </button>
                                 </td>
                             </tr>
                             </tbody>
                         </table>
 
-                        <table class="table">
-                            <caption class="text-left">4、甲状腺功能</caption>
-                            <thead>
-                            <tr>
-                                <th class="text-center">日期</th>
-                                <th class="text-center">T3</th>
-                                <th class="text-center">T4</th>
-                                <th class="text-center">FT3</th>
-                                <th class="text-center">FT4</th>
-                                <th class="text-center">TSH</th>
-                                <th class="text-center">备注</th>
-                                <th></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr ng-repeat="itemsp4 in cases.p4.sp4">
-                                <td class="text-center">
-                                    <input type="text" style="width:100px" ng-model="itemsp4.f1" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp4.f1 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" style="width:100px" ng-model="itemsp4.f2" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp4.f2 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" style="width:100px" ng-model="itemsp4.f3" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp4.f3 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" style="width:100px" ng-model="itemsp4.f4" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp4.f4 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" style="width:100px" ng-model="itemsp4.f5" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp4.f5 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" style="width:100px" ng-model="itemsp4.f6" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp4.f6 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" style="width:100px" ng-model="itemsp4.f7" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp4.f7 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"
-                                          title="删除" ng-click="removeSubPart(cases.p4.sp4,itemsp4)" ng-show="mode=='edit' || mode=='add'"></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="9">
-                                    <button class="btn btn-info pull-left" ng-click="addSubPart(cases.p4.sp4)" ng-show="mode=='edit' || mode=='add'">新增</button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <!--<table class="table">-->
+                        <!--<caption class="text-left">4、甲状腺功能</caption>-->
+                        <!--<thead>-->
+                        <!--<tr>-->
+                        <!--<th class="text-center">日期</th>-->
+                        <!--<th class="text-center">T3</th>-->
+                        <!--<th class="text-center">T4</th>-->
+                        <!--<th class="text-center">FT3</th>-->
+                        <!--<th class="text-center">FT4</th>-->
+                        <!--<th class="text-center">TSH</th>-->
+                        <!--<th class="text-center">备注</th>-->
+                        <!--<th></th>-->
+                        <!--</tr>-->
+                        <!--</thead>-->
+                        <!--<tbody>-->
+                        <!--<tr ng-repeat="itemsp4 in cases.p4.sp4">-->
+                        <!--<td class="text-center">-->
+                        <!--<input type="text" style="width:100px" ng-model="itemsp4.f1" ng-show="mode=='edit' || mode=='add'">-->
+                        <!--<label ng-show="mode=='view'">{{ itemsp4.f1 }}</label>-->
+                        <!--</td>-->
+                        <!--<td class="text-center">-->
+                        <!--<input type="text" style="width:100px" ng-model="itemsp4.f2" ng-show="mode=='edit' || mode=='add'">-->
+                        <!--<label ng-show="mode=='view'">{{ itemsp4.f2 }}</label>-->
+                        <!--</td>-->
+                        <!--<td class="text-center">-->
+                        <!--<input type="text" style="width:100px" ng-model="itemsp4.f3" ng-show="mode=='edit' || mode=='add'">-->
+                        <!--<label ng-show="mode=='view'">{{ itemsp4.f3 }}</label>-->
+                        <!--</td>-->
+                        <!--<td class="text-center">-->
+                        <!--<input type="text" style="width:100px" ng-model="itemsp4.f4" ng-show="mode=='edit' || mode=='add'">-->
+                        <!--<label ng-show="mode=='view'">{{ itemsp4.f4 }}</label>-->
+                        <!--</td>-->
+                        <!--<td class="text-center">-->
+                        <!--<input type="text" style="width:100px" ng-model="itemsp4.f5" ng-show="mode=='edit' || mode=='add'">-->
+                        <!--<label ng-show="mode=='view'">{{ itemsp4.f5 }}</label>-->
+                        <!--</td>-->
+                        <!--<td class="text-center">-->
+                        <!--<input type="text" style="width:100px" ng-model="itemsp4.f6" ng-show="mode=='edit' || mode=='add'">-->
+                        <!--<label ng-show="mode=='view'">{{ itemsp4.f6 }}</label>-->
+                        <!--</td>-->
+                        <!--<td class="text-center">-->
+                        <!--<input type="text" style="width:100px" ng-model="itemsp4.f7" ng-show="mode=='edit' || mode=='add'">-->
+                        <!--<label ng-show="mode=='view'">{{ itemsp4.f7 }}</label>-->
+                        <!--</td>-->
+                        <!--<td class="text-center">-->
+                        <!--<span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"-->
+                        <!--title="删除" ng-click="removeSubPart(cases.p4.sp4,itemsp4)" ng-show="mode=='edit' || mode=='add'"></span>-->
+                        <!--</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                        <!--<td colspan="9">-->
+                        <!--<button class="btn btn-info pull-left" ng-click="addSubPart(cases.p4.sp4)" ng-show="mode=='edit' || mode=='add'">新增</button>-->
+                        <!--</td>-->
+                        <!--</tr>-->
+                        <!--</tbody>-->
+                        <!--</table>-->
 
-                        <table class="table">
-                            <caption class="text-left">5、RAAS系统</caption>
-                            <thead>
-                            <tr>
-                                <th class="text-center">日期</th>
-                                <th class="text-center">血管紧张素</th>
-                                <th class="text-center">肾素活性</th>
-                                <th class="text-center">醛固酮</th>
-                                <th class="text-center">备注</th>
-                                <th></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr ng-repeat="itemsp5 in cases.p4.sp5">
-                                <td class="text-center">
-                                    <input type="text" style="width:150px" ng-model="itemsp5.f1" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp5.f1 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" style="width:150px" ng-model="itemsp5.f2" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp5.f2 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" style="width:150px" ng-model="itemsp5.f3" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp5.f3 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" style="width:150px" ng-model="itemsp5.f4" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp5.f4 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" style="width:150px" ng-model="itemsp5.f5" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp5.f5 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"
-                                          title="删除" ng-click="removeSubPart(cases.p4.sp5,itemsp5)" ng-show="mode=='edit' || mode=='add'"></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="9">
-                                    <button class="btn btn-info pull-left" ng-click="addSubPart(cases.p4.sp5)" ng-show="mode=='edit' || mode=='add'">新增</button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <!--<table class="table">-->
+                        <!--<caption class="text-left">5、RAAS系统</caption>-->
+                        <!--<thead>-->
+                        <!--<tr>-->
+                        <!--<th class="text-center">日期</th>-->
+                        <!--<th class="text-center">血管紧张素</th>-->
+                        <!--<th class="text-center">肾素活性</th>-->
+                        <!--<th class="text-center">醛固酮</th>-->
+                        <!--<th class="text-center">备注</th>-->
+                        <!--<th></th>-->
+                        <!--</tr>-->
+                        <!--</thead>-->
+                        <!--<tbody>-->
+                        <!--<tr ng-repeat="itemsp5 in cases.p4.sp5">-->
+                        <!--<td class="text-center">-->
+                        <!--<input type="text" style="width:150px" ng-model="itemsp5.f1" ng-show="mode=='edit' || mode=='add'">-->
+                        <!--<label ng-show="mode=='view'">{{ itemsp5.f1 }}</label>-->
+                        <!--</td>-->
+                        <!--<td class="text-center">-->
+                        <!--<input type="text" style="width:150px" ng-model="itemsp5.f2" ng-show="mode=='edit' || mode=='add'">-->
+                        <!--<label ng-show="mode=='view'">{{ itemsp5.f2 }}</label>-->
+                        <!--</td>-->
+                        <!--<td class="text-center">-->
+                        <!--<input type="text" style="width:150px" ng-model="itemsp5.f3" ng-show="mode=='edit' || mode=='add'">-->
+                        <!--<label ng-show="mode=='view'">{{ itemsp5.f3 }}</label>-->
+                        <!--</td>-->
+                        <!--<td class="text-center">-->
+                        <!--<input type="text" style="width:150px" ng-model="itemsp5.f4" ng-show="mode=='edit' || mode=='add'">-->
+                        <!--<label ng-show="mode=='view'">{{ itemsp5.f4 }}</label>-->
+                        <!--</td>-->
+                        <!--<td class="text-center">-->
+                        <!--<input type="text" style="width:150px" ng-model="itemsp5.f5" ng-show="mode=='edit' || mode=='add'">-->
+                        <!--<label ng-show="mode=='view'">{{ itemsp5.f5 }}</label>-->
+                        <!--</td>-->
+                        <!--<td class="text-center">-->
+                        <!--<span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"-->
+                        <!--title="删除" ng-click="removeSubPart(cases.p4.sp5,itemsp5)" ng-show="mode=='edit' || mode=='add'"></span>-->
+                        <!--</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                        <!--<td colspan="9">-->
+                        <!--<button class="btn btn-info pull-left" ng-click="addSubPart(cases.p4.sp5)" ng-show="mode=='edit' || mode=='add'">新增</button>-->
+                        <!--</td>-->
+                        <!--</tr>-->
+                        <!--</tbody>-->
+                        <!--</table>-->
                     </div>
                 </div>
-<!--检验 end-->
+                <!--检验 end-->
 
-<!--检查 begin-->
+                <!--检查 begin-->
                 <div class="panel panel-danger">
                     <div class="panel-heading">
                         <h3 class="panel-title">五、检查</h3>
@@ -453,8 +496,10 @@
                             <caption class="text-left">1、胸片</caption>
                             <tr>
                                 <td>
-                                    <textarea style="width: 90%;height: 100px" ng-model="cases.p5.sp1" ng-show="mode=='edit' || mode=='add'"></textarea>
-                                    <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{ cases.p5.sp1 }}</label>
+                                    <textarea style="width: 90%;height: 100px" ng-model="cases.p5.sp1"
+                                              ng-show="mode=='edit' || mode=='add'"></textarea>
+                                    <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{
+                                        cases.p5.sp1 }}</label>
                                 </td>
                             </tr>
                         </table>
@@ -463,8 +508,10 @@
                             <caption class="text-left">2、心电图</caption>
                             <tr>
                                 <td>
-                                    <textarea style="width: 90%;height: 100px" ng-model="cases.p5.sp2" ng-show="mode=='edit' || mode=='add'"></textarea>
-                                    <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{ cases.p5.sp2 }}</label>
+                                    <textarea style="width: 90%;height: 100px" ng-model="cases.p5.sp2"
+                                              ng-show="mode=='edit' || mode=='add'"></textarea>
+                                    <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{
+                                        cases.p5.sp2 }}</label>
                                 </td>
                             </tr>
                         </table>
@@ -473,8 +520,10 @@
                             <caption class="text-left">3、Holter</caption>
                             <tr>
                                 <td>
-                                    <textarea style="width: 90%;height: 100px" ng-model="cases.p5.sp3" ng-show="mode=='edit' || mode=='add'"></textarea>
-                                    <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{ cases.p5.sp3 }}</label>
+                                    <textarea style="width: 90%;height: 100px" ng-model="cases.p5.sp3"
+                                              ng-show="mode=='edit' || mode=='add'"></textarea>
+                                    <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{
+                                        cases.p5.sp3 }}</label>
                                 </td>
                             </tr>
                         </table>
@@ -499,48 +548,59 @@
                             <tbody>
                             <tr ng-repeat-start="itemsp4 in cases.p5.sp4">
                                 <td class="text-center">
-                                    <input type="text" style="width:70px" ng-model="itemsp4.f1" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp4.f1 }}</label>
+                                    <input type="text" style="width:70px" ng-model="itemsp4.f1"
+                                           ng-show="mode=='edit' || mode=='add'">
+                                    <label ng-show="mode=='view'" style="width:70px">{{ itemsp4.f1 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:70px" ng-model="itemsp4.f2" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:70px" ng-model="itemsp4.f2"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp4.f2 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:70px" ng-model="itemsp4.f3" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:70px" ng-model="itemsp4.f3"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp4.f3 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:70px" ng-model="itemsp4.f4" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:70px" ng-model="itemsp4.f4"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp4.f4 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:70px" ng-model="itemsp4.f5" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:70px" ng-model="itemsp4.f5"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp4.f5 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:70px" ng-model="itemsp4.f6" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:70px" ng-model="itemsp4.f6"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp4.f6 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:70px" ng-model="itemsp4.f7" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:70px" ng-model="itemsp4.f7"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp4.f7 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:70px" ng-model="itemsp4.f8" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:70px" ng-model="itemsp4.f8"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp4.f8 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:70px" ng-model="itemsp4.f9" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:70px" ng-model="itemsp4.f9"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp4.f9 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width:70px" ng-model="itemsp4.f10" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width:70px" ng-model="itemsp4.f10"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemsp4.f10 }}</label>
                                 </td>
                                 <td class="text-center">
                                     <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"
-                                          title="删除" ng-click="removeSubPart(cases.p5.sp4,itemsp4)" ng-show="mode=='edit' || mode=='add'"></span>
+                                          title="删除" ng-click="removeSubPart(cases.p5.sp4,itemsp4)"
+                                          ng-show="mode=='edit' || mode=='add'"></span>
                                 </td>
                             </tr>
                             <tr ng-repeat-end>
@@ -548,74 +608,193 @@
                                     结论
                                 </td>
                                 <td class="text-center" colspan="10">
-                                    <textarea style="width: 90%;height: 50px" ng-model="itemsp4.f11" ng-show="mode=='edit' || mode=='add'"></textarea>
-                                    <label ng-show="mode=='view'">{{ itemsp4.f11 }}</label>
+                                    <textarea style="width: 90%;height: 50px" ng-model="itemsp4.f11"
+                                              ng-show="mode=='edit' || mode=='add'"></textarea>
+                                    <label class="text-left" style="text-indent: 2em;width: 90%" ng-show="mode=='view'">{{
+                                        itemsp4.f11 }}</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="10">
-                                    <button class="btn btn-info pull-left" ng-click="addSubPart(cases.p5.sp4)" ng-show="mode=='edit' || mode=='add'">新增</button>
+                                    <button class="btn btn-info pull-left" ng-click="addSubPart(cases.p5.sp4)"
+                                            ng-show="mode=='edit' || mode=='add'">新增
+                                    </button>
                                 </td>
                             </tr>
                             </tbody>
                         </table>
 
-                        <table class="table">
+                        <table>
                             <caption class="text-left">5、心脏核磁检查</caption>
-                            <thead>
                             <tr>
-                                <th class="text-center">日期</th>
-                                <th class="text-center">T2WI</th>
-                                <th class="text-center">EGE</th>
-                                <th class="text-center">LGE</th>
-                                <th class="text-center">备注</th>
-                                <th class="text-center">总分</th>
-                                <th></th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr ng-repeat="itemsp5 in cases.p5.sp5">
-                                <td class="text-center">
-                                    <input type="text" style="width:120px" ng-model="itemsp5.f1" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp5.f1 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" style="width:120px" ng-model="itemsp5.f2" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp5.f2 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" style="width:120px" ng-model="itemsp5.f3" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp5.f3 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" style="width:120px" ng-model="itemsp5.f4" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp5.f4 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" style="width:120px" ng-model="itemsp5.f5" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp5.f5 }}</label>
-                                </td>
-                                <td class="text-center">
-                                    <input type="text" style="width:120px" ng-model="itemsp5.f6" ng-show="mode=='edit' || mode=='add'">
-                                    <label ng-show="mode=='view'">{{ itemsp5.f6 }}</label>
-                                </td>
-                                <td class="text-center">
+                                <td>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th class="text-center" style="width:150px">日期</th>
+                                            <th class="text-center" style="width:150px">T2WI</th>
+                                            <th class="text-center" style="width:150px">EGE</th>
+                                            <th class="text-center" style="width:150px">LGE</th>
+                                            <th class="text-center" style="width:150px">备注</th>
+                                            <th class="text-center" style="width:150px">总分</th>
+                                            <th></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr ng-repeat="itemssp1 in cases.p5.sp5.ssp1">
+                                            <td class="text-center" style="width:70px">
+                                                <input type="text" style="width:70px" ng-model="itemssp1.f1"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'">{{ itemssp1.f1 }}</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <input type="text" style="width:120px" ng-model="itemssp1.f2"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'">{{ itemssp1.f2 }}</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <input type="text" style="width:120px" ng-model="itemssp1.f3"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'">{{ itemssp1.f3 }}</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <input type="text" style="width:120px" ng-model="itemssp1.f4"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'">{{ itemssp1.f4 }}</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <input type="text" style="width:120px" ng-model="itemssp1.f5"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'">{{ itemssp1.f5 }}</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <input type="text" style="width:120px" ng-model="itemssp1.f6"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'">{{ itemssp1.f6 }}</label>
+                                            </td>
+                                            <td class="text-center">
                                     <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"
-                                          title="删除" ng-click="removeSubPart(cases.p5.sp5,itemsp5)" ng-show="mode=='edit' || mode=='add'"></span>
+                                          title="删除" ng-click="removeSubPart(cases.p5.sp5.ssp1,itemssp1)"
+                                          ng-show="mode=='edit' || mode=='add'"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="6">
+                                                <button class="btn btn-info pull-left"
+                                                        ng-click="addSubPart(cases.p5.sp5.ssp1)"
+                                                        ng-show="mode=='edit' || mode=='add'">新增
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="6">
-                                    <button class="btn btn-info pull-left" ng-click="addSubPart(cases.p5.sp5)" ng-show="mode=='edit' || mode=='add'">新增</button>
+                                <td>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th class="text-center">日期</th>
+                                            <th class="text-center">LA</th>
+                                            <th class="text-center">LVED</th>
+                                            <th class="text-center">间隔壁</th>
+                                            <th class="text-center">后壁</th>
+                                            <th class="text-center">前壁</th>
+                                            <th class="text-center">侧壁</th>
+                                            <th class="text-center">下壁</th>
+                                            <th class="text-center">EF</th>
+                                            <th class="text-center">FS</th>
+                                            <th></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr ng-repeat-start="itemssp2 in cases.p5.sp5.ssp2">
+                                            <td class="text-center">
+                                                <input type="text" style="width:70px" ng-model="itemssp2.f1"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'" style="width: 70px">{{ itemssp2.f1 }}</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <input type="text" style="width:70px" ng-model="itemssp2.f2"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'">{{ itemssp2.f2 }}</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <input type="text" style="width:70px" ng-model="itemssp2.f3"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'">{{ itemssp2.f3 }}</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <input type="text" style="width:70px" ng-model="itemssp2.f4"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'">{{ itemssp2.f4 }}</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <input type="text" style="width:70px" ng-model="itemssp2.f5"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'">{{ itemssp2.f5 }}</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <input type="text" style="width:70px" ng-model="itemssp2.f6"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'">{{ itemssp2.f6 }}</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <input type="text" style="width:70px" ng-model="itemssp2.f7"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'">{{ itemssp2.f7 }}</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <input type="text" style="width:70px" ng-model="itemssp2.f8"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'">{{ itemssp2.f8 }}</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <input type="text" style="width:70px" ng-model="itemssp2.f9"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'">{{ itemssp2.f9 }}</label>
+                                            </td>
+                                            <td class="text-center">
+                                                <input type="text" style="width:70px" ng-model="itemssp2.f10"
+                                                       ng-show="mode=='edit' || mode=='add'">
+                                                <label ng-show="mode=='view'">{{ itemssp2.f10 }}</label>
+                                            </td>
+                                            <td class="text-center">
+                                    <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"
+                                          title="删除" ng-click="removeSubPart(cases.p5.sp5.ssp2,itemssp2)"
+                                          ng-show="mode=='edit' || mode=='add'"></span>
+                                            </td>
+                                        </tr>
+                                        <tr ng-repeat-end>
+                                            <td class="text-center">
+                                                结论
+                                            </td>
+                                            <td class="text-center" colspan="10">
+                                                <textarea style="width: 90%;height: 50px" ng-model="itemsp4.f11"
+                                                          ng-show="mode=='edit' || mode=='add'"></textarea>
+                                                <label class="text-left" style="text-indent: 2em;width: 90%"
+                                                       ng-show="mode=='view'">{{ itemssp2.f11 }}</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="10">
+                                                <button class="btn btn-info pull-left"
+                                                        ng-click="addSubPart(cases.p5.sp5.ssp2)"
+                                                        ng-show="mode=='edit' || mode=='add'">新增
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </td>
                             </tr>
-                            </tbody>
                         </table>
                     </div>
                 </div>
-<!--检查 end-->
+                <!--检查 end-->
 
-<!--结果判定 begin-->
+                <!--结果判定 begin-->
                 <div class="panel panel-info">
                     <div class="panel-heading">
                         <h3 class="panel-title">六、结果判定</h3>
@@ -625,10 +804,10 @@
                             <thead>
                             <tr>
                                 <th class="text-center">日期</th>
-                                <th class="text-center">项目1</th>
-                                <th class="text-center">项目2</th>
-                                <th class="text-center">项目3</th>
-                                <th class="text-center">项目4</th>
+                                <th class="text-center">心衰/心源性休克</th>
+                                <th class="text-center">新增扩大</th>
+                                <th class="text-center">心电图改变</th>
+                                <th class="text-center">心肌酶升高</th>
                                 <th class="text-center">总分</th>
                                 <th></th>
                             </tr>
@@ -636,44 +815,53 @@
                             <tbody>
                             <tr ng-repeat="itemp6 in cases.p6">
                                 <td class="text-center">
-                                    <input type="text" style="width: 120px" ng-model="itemp6.f1" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width: 120px" ng-model="itemp6.f1"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemp6.f1 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width: 120px" ng-model="itemp6.f2" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width: 120px" ng-model="itemp6.f2"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemp6.f2 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width: 120px" ng-model="itemp6.f3" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width: 120px" ng-model="itemp6.f3"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemp6.f3 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width: 120px" ng-model="itemp6.f4" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width: 120px" ng-model="itemp6.f4"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemp6.f4 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width: 120px" ng-model="citemp6.f5" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width: 120px" ng-model="citemp6.f5"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemp6.f5 }}</label>
                                 </td>
                                 <td class="text-center">
-                                    <input type="text" style="width: 120px" ng-model="itemp6.f6" ng-show="mode=='edit' || mode=='add'">
+                                    <input type="text" style="width: 120px" ng-model="itemp6.f6"
+                                           ng-show="mode=='edit' || mode=='add'">
                                     <label ng-show="mode=='view'">{{ itemp6.f6 }}</label>
                                 </td>
                                 <td class="text-center">
                                     <span class="glyphicon glyphicon-remove text-danger" aria-hidden="true"
-                                          title="删除" ng-click="removeSubPart(cases.p6,itemp6)" ng-show="mode=='edit' || mode=='add'"></span>
+                                          title="删除" ng-click="removeSubPart(cases.p6,itemp6)"
+                                          ng-show="mode=='edit' || mode=='add'"></span>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="6">
-                                    <button class="btn btn-info" ng-click="addSubPart(cases.p6)" ng-show="mode=='edit' || mode=='add'">新增</button>
+                                    <button class="btn btn-info" ng-click="addSubPart(cases.p6)"
+                                            ng-show="mode=='edit' || mode=='add'">新增
+                                    </button>
                                 </td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-<!--结果判定 end-->
+                <!--结果判定 end-->
 
             </div>
         </div>

@@ -26,7 +26,10 @@ casesApp.controller("addController", function ($rootScope, $scope, $timeout, $ht
                 sp2: '',
                 sp3: '',
                 sp4: [],
-                sp5: []
+                sp5: {
+                    ssp1 : [],
+                    ssp2 : []
+                }
 
             },
             p6: []
